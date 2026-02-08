@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Injector UI Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="matrix"></div>
+
+<div class="app">
+
+  <!-- ===== AREA ATAS ===== -->
+  <div class="main">
+
+    <!-- PANEL KIRI -->
+    <aside class="injector">
+      <div class="panel">
+        <h1>$ _InjectionAttack.server</h1>
+        <small>Ver 1.0.3 (WEB UI)</small>
+
+        <h2>Cheat Slot Engine</h2>
+        <p class="note">(WEB Tampilan • 90% Fungsi Nyata)</p>
+
+        <label>Target Link</label>
+        <input 
+          id="targetLink"
+          type="text"
+          value="https://rajapupuksawit.pro/win1131-kw"
+          readonly
+        >
+
+        <label>Device</label>
+        <select>
+          <option>Android</option>
+          <option>IOS</option>
+        </select>
+
+        <label>Provider Slot</label>
+        <select>
+          <option>Pragmatic Play</option>
+          <option>PG Soft</option>
+        </select>
+
+        <label>VPN Server</label>
+        <select>
+          <option>Hongkong</option>
+          <option>Singapore</option>
+          <option>Thailand</option>
+        </select>
+
+        <div class="toggle">
+          <span>Auto Scatter / Wild</span>
+          <button class="switch">NO</button>
+        </div>
+
+        <div class="toggle">
+          <span>95% X50 | 80% X100</span>
+          <button class="switch">NO</button>
+        </div>
+
+        <button id="injectBtn" class="inject">AKTIFKAN INJECTOR</button>
+
+<div id="injectStatus" class="inject-status hidden">
+  <div class="loader"></div>
+  <p class="status-text">CONNECTING...</p>
+</div>
+
+<p id="successText" class="success-text hidden">
+  Cheat Slot Engine Sukses
+</p>
+
+        <footer>UI WEB by Pemuda Slot Online</footer>
+      </div>
+    </aside>
+
+    <!-- AREA KANAN -->
+    <section class="workspace"></section>
+
+  </div>
+
+  <!-- ===== CHATROOM BAWAH ===== -->
+  <div class="chatroom">
+    <div class="chat-header">Chatroom (355)</div>
+
+    <div id="chatMessages" class="chat-messages"></div>
+
+    <div class="chat-input">
+      <input id="chatInput" placeholder="Bergabung dalam chat...">
+      <button id="sendChat">Kirim</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
