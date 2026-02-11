@@ -226,10 +226,64 @@ input::placeholder {
   padding-left: 18px;
   line-height: 1.6;
 }
+/* INTRO SCREEN */
+#introScreen {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg,#0f172a,#1e293b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  animation: fadeOut 1s ease forwards;
+  animation-delay: 3s;
+}
+
+.intro-box {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  color: #fff;
+  max-width: 320px;
+}
+
+.intro-box img {
+  width: 90px;
+  margin-bottom: 15px;
+}
+
+.intro-box h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.intro-box p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #22c55e;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 </style>
 </head>
 
 <body>
+
+<!-- INTRO SPLASH -->
+<div id="introScreen">
+  <div class="intro-box">
+    <img src="https://jnt76.wordpress.com/wp-content/uploads/2026/02/channels4_profile.jpg" alt="Logo">
+    <h2>🎉 Promo Spesial Member Baru 🎉</h2>
+    <p>Bonus Hingga Rp 200.000</p>
+  </div>
+</div>
 
 <!-- LIVE CLAIM BOTTOM CENTER -->
 <div class="live-claim-bottom" id="liveClaim">
@@ -261,7 +315,6 @@ input::placeholder {
         METHOD : <span>QRIS / TRANSFER</span><br>
         STATUS : <span id="status">READY</span><br>
         TIME : <span id="time"></span>
-        <p>NOTE : JANGAN SAMPAI KETAHUAN ADMIN</p>
     </div>
 
     <!-- INPUT USERNAME -->
@@ -316,7 +369,7 @@ input::placeholder {
 </div>
 
     <div class="footer">
-        SYSTEM VERIFIED • LIVE SERVER
+        NOTE : JANGAN SAMPAI KETAHUAN ADMIN
     </div>
 </div>
 
@@ -355,8 +408,8 @@ function randomUser() {
     document.getElementById("liveUser").innerText = user;
 }
 
-// ganti username tiap 4 detik
-setInterval(randomUser, 4000);
+// ganti username tiap 8 detik
+setInterval(randomUser, 8000);
 randomUser();
 
 function claimBonus() {
@@ -404,6 +457,13 @@ function showSuccess() {
     document.getElementById('success').style.display = "block";
 }
 </script>
+<script>
+setTimeout(() => {
+  const intro = document.getElementById("introScreen");
+  if (intro) intro.remove();
+}, 4000);
+</script>
+
 <script>
 function blockKeys(e) {
   if (
